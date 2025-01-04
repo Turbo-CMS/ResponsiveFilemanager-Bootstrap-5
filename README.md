@@ -1,6 +1,8 @@
 # Responsive FileManager Bootstrap 5 for TinyMCE
 
-PRODUCTION VERSION DOWNLOAD: https://github.com/Turbo-CMS/ResponsiveFilemanager-Bootstrap-5/releases
+<img src="./screenshot.png" style="max-width: 100%; margin-left: auto; margin-right: auto;" />
+
+**PRODUCTION VERSION DOWNLOAD:** [GitHub Release](https://github.com/Turbo-CMS/ResponsiveFilemanager-Bootstrap-5/releases)
 
 Released under Creative Commons Attribution-NonCommercial 3.0 Unported License.
 
@@ -11,9 +13,13 @@ Released under Creative Commons Attribution-NonCommercial 3.0 Unported License.
 
 ### Use as TinyMCE 7 File Manager
 
-Copy tinymce/plugins/responsivefilemanager folder to tinymce/plugins/ in your server
-N.B.: REMEMBER THAT RESPONVIVEFILEMANAGER IS NOT FILEMANAGER FOLDER BUT AN ADDITIONAL PLUGIN
-Settings of tinymce should be like this: (remember to add responsivefilemanager in plugins list)
+1. **Copy** the folder `tinymce/plugins/responsivefilemanager` to `tinymce/plugins/` on your server.
+
+   > **Note:** Remember that `responsivefilemanager` is **not** the `filemanager` folder but an additional plugin.
+
+2. **Configure TinyMCE:**  
+   Make sure your TinyMCE settings include `responsivefilemanager` in the plugins list:
+   - Add `responsivefilemanager` to the plugins list.
 
 ```js
    tinymce.init({
@@ -30,24 +36,30 @@ Settings of tinymce should be like this: (remember to add responsivefilemanager 
       'removeformat | media image | help',
       content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }',
       external_filemanager_path:"/filemanager/",
-      filemanager_title:"Responsive Filemanager" ,
-      external_plugins: { "filemanager" : "/filemanager/plugin.min.js"}
+      filemanager_title:"Responsive Filemanager",
+      external_plugins: { "filemanager" : "/filemanager/plugin.min.js" }
       });
    ```
 
-You can pass this variables on TinyMCE init.
-filemanager_title the title of filemanager window default="Responsive filemanager"
-filemanager_sort_by: the element to sorting (values: name,size,extension,date) default=""
-filemanager_descending: descending ? or ascending (values=1 or 0) default="0"
+### TinyMCE Configuration
 
-> [!WARNING]
-> If you want full path url in tinyMCE paths you can add relative_urls: false on tinyMCE init
-> external_filemanager_path and external_plugins path must be absolute from root and must point to filemanager folder not responsivefilemanager plugin folder
+You can pass these variables in the TinyMCE initialization:
 
-Change the path in your tinymce init function in external_filemanager_path and external_plugins (the path must be a absolute path from base_url of your site and must start with / so in this example i have the filemanager folder in www.site.com/filemanager/)
+- **filemanager_title:** The title of the file manager window. Default value is `"Responsive filemanager"`.
+- **filemanager_sort_by:** The element to sort by. Possible values: `name`, `size`, `extension`, `date`. Default value is `""`.
+- **filemanager_descending:** Whether to sort in descending order. Possible values: `1` (descending) or `0` (ascending). Default value is `"0"`.
 
-> [!WARNING]
-> If you are updating from older version (from 1 to 7) substitute your tinyMCE with new or download only the image/media/link originals folders and copy in your tinyMCE plugin folder   
+> [!WARNING]  
+> If you want the full path URL in TinyMCE paths, you can set `relative_urls: false` in your TinyMCE initialization.
+
+- **external_filemanager_path** and **external_plugins** path must be absolute from the root and must point to the filemanager folder, not the responsivefilemanager plugin folder.
+
+---
+
+Change the path in your TinyMCE init function for `external_filemanager_path` and `external_plugins`. The path must be an absolute path from the base URL of your site and must start with `/`. For example, if the filemanager folder is located at `www.site.com/filemanager/`, the path should look like that.
+
+> [!WARNING]  
+> If you are updating from an older version (from 1 to 7), substitute your TinyMCE with the new version, or download and copy only the `image`, `media`, and `link` folders from the original files into your TinyMCE plugin folder.
 
 ### Dark Mode
 
@@ -68,7 +80,7 @@ Change the path in your tinymce init function in external_filemanager_path and e
       'removeformat | media image | help',
       content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }',
       external_filemanager_path:"/filemanager/",
-      filemanager_title:"Responsive Filemanager" ,
-      external_plugins: { "filemanager" : "/filemanager/plugin.min.js"}
+      filemanager_title:"Responsive Filemanager",
+      external_plugins: { "filemanager" : "/filemanager/plugin.min.js" }
       });
    ```
