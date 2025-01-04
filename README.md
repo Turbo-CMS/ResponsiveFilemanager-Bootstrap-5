@@ -28,7 +28,7 @@ Released under Creative Commons Attribution-NonCommercial 3.0 Unported License.
       plugins: [
          'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
          'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
-         'insertdatetime', 'media', 'table', 'help', 'wordcount'
+         'insertdatetime', 'media', 'table', 'help', 'wordcount', 'responsivefilemanager'
       ],
       toolbar: 'undo redo | blocks | ' +
       'bold italic backcolor | alignleft aligncenter ' +
@@ -72,7 +72,7 @@ Change the path in your TinyMCE init function for `external_filemanager_path` an
       plugins: [
          'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
          'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
-         'insertdatetime', 'media', 'table', 'help', 'wordcount'
+         'insertdatetime', 'media', 'table', 'help', 'wordcount', 'responsivefilemanager'
       ],
       toolbar: 'undo redo | blocks | ' +
       'bold italic backcolor | alignleft aligncenter ' +
